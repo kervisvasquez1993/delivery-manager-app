@@ -6,8 +6,44 @@ class SliverPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: _List_task(),
+      // body: _List_task(),
+      body: _ManinScroll(),
     );
+  }
+}
+
+class _ManinScroll extends StatelessWidget {
+  final items = [
+    _ListItem('El ', Color(0xffF08F66)),
+    _ListItem('Futuro', Color(0xffF2A38A)),
+    _ListItem('es hoy ggg!!!', Color(0xffF7CDD5)),
+    _ListItem('es hoy ggg!!!', Color(0xffF7CDD5)),
+    _ListItem('es hoy ggg!!!', Color(0xffF7CDD5)),
+    _ListItem('es hoy ggg!!!', Color(0xffF7CDD5)),
+    _ListItem('es hoy ggg!!!', Color(0xffF7CDD5)),
+    _ListItem('es hoy ggg!!!', Color(0xffF7CDD5)),
+    _ListItem('El ', Color(0xffF08F66)),
+    _ListItem('Futuro', Color(0xffF2A38A)),
+    _ListItem('es hoy ggg!!!', Color(0xffF7CDD5)),
+    _ListItem('es hoy ggg!!!', Color(0xffF7CDD5)),
+    _ListItem('es hoy ggg!!!', Color(0xffF7CDD5)),
+    _ListItem('es hoy ggg!!!', Color(0xffF7CDD5)),
+    _ListItem('es hoy ggg!!!', Color(0xffF7CDD5)),
+    _ListItem('es hoy ggg!!!', Color(0xffF7CDD5)),
+  ];
+  @override
+  Widget build(BuildContext context) {
+    return CustomScrollView(slivers: <Widget>[
+      SliverAppBar(
+        floating: true,
+        backgroundColor: Colors.red,
+        title: Text("data"),
+      ),
+      SliverList(
+          delegate: SliverChildListDelegate(
+        items,
+      ))
+    ]);
   }
 }
 
@@ -16,7 +52,7 @@ class _List_task extends StatelessWidget {
   final items = [
     _ListItem('El ', Color(0xffF08F66)),
     _ListItem('Futuro', Color(0xffF2A38A)),
-    _ListItem('es hoy !!!', Color(0xffF7CDD5)),
+    _ListItem('es hoy ggg!!!', Color(0xffF7CDD5)),
   ];
   @override
   Widget build(BuildContext context) {
